@@ -1,0 +1,7 @@
+for x in range(1,101):
+    if x == 37:
+        print("Found 37, breaking the loop.")
+        break #stop the loop when x is 37
+    print(x)
+else:
+    print("Loop completed without finding 37.")
