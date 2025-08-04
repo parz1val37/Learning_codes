@@ -1,0 +1,4 @@
+Have a nice day!
+Welcome to the world of Python.
+How are you!
+The End.
