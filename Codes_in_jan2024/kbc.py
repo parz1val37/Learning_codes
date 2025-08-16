@@ -26,3 +26,5 @@ match c:
         score += 1
     case _:
         print("WRONG")
+
+print(f"your total score is: {score}/3")
