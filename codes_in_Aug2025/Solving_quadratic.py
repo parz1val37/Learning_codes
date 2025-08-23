@@ -2,7 +2,7 @@ import math
 print("General form of quadratic is: ax^2 + bx + c, where (a!=0).")
 a = int(input("Enter the value for a: "))
 if a == 0:
-    print("a can't be equals to zero.")
+    print("Error: 'a' can't be equals to zero.")
 else:
     b = int(input("Enter the value for b: "))
     c = int(input("Enter the value for c: "))
@@ -29,4 +29,5 @@ else:
         print("This quadratic have two real and distinct roots.")
         root1 = (-b + round(math.sqrt(d), 2))/(2*a)
         root2 = (-b - round(math.sqrt(d), 2))/(2*a)
+
         print(f"Which are \'{root1}\' and \'{root2}\'.")
