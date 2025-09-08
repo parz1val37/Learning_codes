@@ -42,7 +42,6 @@ app_ui = ui.page_sidebar(
 )
 
 def server(input, output, session):
-    # Same Add / Update / Clear / Edit / Delete code as before ----------------
     @reactive.effect
     @reactive.event(input.add)
     def _add():
@@ -176,7 +175,6 @@ def server(input, output, session):
         </div>
         """)
 
-    # PDF Download (receipt-style narrow width)
     @render.download(filename=lambda: f"receipt_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf")
     def download_pdf():
         df = items.get()
@@ -193,7 +191,6 @@ def server(input, output, session):
         from io import BytesIO
         buffer = BytesIO()
 
-        # --- custom page size like thermal roll ---
         RECEIPT_WIDTH = 220  # ~80mm
         RECEIPT_HEIGHT = 600
         receipt_page = (RECEIPT_WIDTH, RECEIPT_HEIGHT)
@@ -240,5 +237,6 @@ def server(input, output, session):
 
         buffer.seek(0)
         yield buffer.read()
+
 
 app = App(app_ui, server)
