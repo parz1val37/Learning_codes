@@ -1,9 +1,8 @@
-def Fibonacci(n):
+def fibonacci(n):
     sequence = [0,1]
-    i = 0
-    while i<(n-2):
-        sequence.append(sequence[i] + sequence [i+1])
-        i += 1
+
+    for _ in range(n-2):
+        sequence.append(sequence[-2] + sequence [-1])
     return sequence
 
 try:
@@ -15,6 +14,6 @@ try:
     if n==2:
         print("Fibonacci series of 2 digit is [0,1]")
     if n>2:
-        print(f"Fibonacci series of {n} digit is:\n{Fibonacci(n)}")
+        print(f"Fibonacci series of {n} digit is:\n{fibonacci(n)}")
 except Exception as e:
     print(f"ERROR: {e}")
