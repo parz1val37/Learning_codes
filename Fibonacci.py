@@ -3,7 +3,7 @@ def Fibonacci(n):
     i = 0
     while i<(n-2):
         sequence.append(sequence[i] + sequence [i+1])
-    i += 1
+        i += 1
     return sequence
 
 try:
