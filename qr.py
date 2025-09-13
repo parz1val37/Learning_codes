@@ -2,7 +2,7 @@ import qrcode
 from qrcode.constants import ERROR_CORRECT_H
 
 
-data = "FUCK YOU🖕🏿! BITCH"
+data = "add any text, or link here"
 
 
 qr = qrcode.QRCode(
@@ -21,4 +21,5 @@ print("QR code saved as qrcode.png")
 
 
 print("\nSCAN ON YOUR OWN RISK:\n")
+
 qr.print_ascii(invert=True)   
